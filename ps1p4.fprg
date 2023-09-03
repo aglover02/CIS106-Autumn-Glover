@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-03 03:35:52 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMDktMDM7MDM6MjE6NTggUE07Mjg2MQ=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMDktMDM7MDM6MzU6NTIgUE07MTsyOTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credit" type="Integer" array="False" size=""/>
+            <declare name="labfee" type="Integer" array="False" size=""/>
+            <declare name="totaltuition" type="Integer" array="False" size=""/>
+            <input variable="credit"/>
+            <input variable="lastname"/>
+            <assign variable="labfee" expression="100"/>
+            <assign variable="totaltuition" expression="credit * 250 + labfee"/>
+            <output expression="lastname &amp;&quot;, your tuition is &quot; &amp;totaltuition" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
