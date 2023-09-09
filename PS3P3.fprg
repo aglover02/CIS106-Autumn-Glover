@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-09 05:11:34 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMDktMDk7MDQ6NDc6NDEgUE07Mjg2OA=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMDktMDk7MDU6MTE6MzQgUE07MTsyOTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalamount" type="Real" array="False" size=""/>
+            <declare name="amountperperson" type="Real" array="False" size=""/>
+            <input variable="totalamount"/>
+            <assign variable="amountperperson" expression="amountpaid / 3"/>
+            <output expression="&quot;Each person receives: $&quot;&amp;amountperperson" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

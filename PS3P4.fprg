@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-09 05:35:06 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMDktMDk7MDU6MTQ6MTQgUE07Mjg2Mw=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMDktMDk7MDU6MzU6MDYgUE07MTsyOTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="make" type="String" array="False" size=""/>
+            <declare name="model" type="String" array="False" size=""/>
+            <declare name="msrp" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="amountoff" type="Real" array="False" size=""/>
+            <declare name="discountedprice" type="Real" array="False" size=""/>
+            <input variable="make"/>
+            <input variable="model"/>
+            <input variable="msrp"/>
+            <input variable="discount"/>
+            <assign variable="amountoff" expression="msrp * discount"/>
+            <assign variable="discountedprice" expression="msrp - amountoff"/>
+            <output expression="&quot;Make: &quot;&amp;make" newline="True"/>
+            <output expression="&quot;Model: &quot;&amp;model" newline="True"/>
+            <output expression="&quot;Amount off: $&quot;&amp;amountoff" newline="True"/>
+            <output expression="&quot;Discounted price: $&quot;&amp;discountedprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
