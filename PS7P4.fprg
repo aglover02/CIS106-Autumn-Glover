@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-23 08:29:17 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTAtMjM7MDc6MDA6NTMgUE07Mjg1MQ=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTAtMjM7MDg6Mjk6MTcgUE07MTsyOTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="yesorno" type="String" array="False" size=""/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <declare name="noofworkers" type="Integer" array="False" size=""/>
+            <assign variable="noofworkers" expression="0"/>
+            <declare name="sumofpay" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <declare name="sumgrosspay" type="Real" array="False" size=""/>
+            <assign variable="sumgrosspay" expression="0"/>
+            <input variable="yesorno"/>
+            <while expression="yesorno = &quot;yes&quot;">
+                <input variable="lastname"/>
+                <input variable="hours"/>
+                <input variable="rate"/>
+                <if expression="hours &gt;= 40">
+                    <then>
+                        <assign variable="grosspay" expression="(rate * hours) + (hours - 40) * 1.5 * rate"/>
+                    </then>
+                    <else>
+                        <assign variable="grosspay" expression="rate * hours"/>
+                    </else>
+                </if>
+                <assign variable="noofworkers" expression="noofworkers +1"/>
+                <output expression="&quot;Gross pay: $&quot;&amp;grosspay" newline="True"/>
+                <assign variable="sumgrosspay" expression="sumgrosspay + grosspay"/>
+                <output expression="&quot;Last name: &quot;&amp;lastname" newline="True"/>
+                <input variable="yesorno"/>
+            </while>
+            <assign variable="average" expression="sumgrosspay / noofworkers"/>
+            <output expression="&quot;Number of employees: &quot;&amp;noofworkers" newline="True"/>
+            <output expression="&quot;Sum of all the gross pays: $&quot;&amp;sumgrosspay" newline="True"/>
+            <output expression="&quot;Average pay: $&quot;&amp;average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

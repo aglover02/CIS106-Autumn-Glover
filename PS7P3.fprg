@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-23 07:00:30 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTAtMjM7MDQ6NTU6MzggUE07Mjg2MQ=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTAtMjM7MDc6MDA6MzAgUE07MTsyOTU0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="yesorno" type="String" array="False" size=""/>
+            <input variable="yesorno"/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="exam1" type="Real" array="False" size=""/>
+            <declare name="exam2" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <declare name="noofstudents" type="Integer" array="False" size=""/>
+            <assign variable="noofstudents" expression="0"/>
+            <declare name="yes" type="String" array="False" size=""/>
+            <while expression="yesorno = &quot;yes&quot;">
+                <input variable="lastname"/>
+                <input variable="exam1"/>
+                <input variable="exam2"/>
+                <assign variable="average" expression="(exam1 + exam2) / 2"/>
+                <output expression="&quot;Last name: &quot;&amp;lastname" newline="True"/>
+                <output expression="&quot;Average score: &quot;&amp;average" newline="True"/>
+                <input variable="yesorno"/>
+                <assign variable="noofstudents" expression="noofstudents + 1"/>
+            </while>
+            <output expression="&quot;number of students who entered data: &quot; &amp;noofstudents" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

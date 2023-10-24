@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-23 04:51:45 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTAtMjI7MDM6NDE6NTIgUE07Mjg1MA=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTAtMjM7MDQ6NTE6NDUgUE07MTsyOTYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start" type="Integer" array="False" size=""/>
+            <declare name="stop" type="Integer" array="False" size=""/>
+            <declare name="increment" type="Integer" array="False" size=""/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <input variable="start"/>
+            <input variable="stop"/>
+            <input variable="increment"/>
+            <while expression="start &lt; stop">
+                <assign variable="start" expression="start + increment"/>
+                <output expression="start" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
