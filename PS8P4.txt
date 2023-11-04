@@ -1,0 +1,15 @@
+Widget
+20
+40
+Hammer
+10
+25
+Saw
+6
+9
+Ball
+15
+5
+Scissors
+30
+10

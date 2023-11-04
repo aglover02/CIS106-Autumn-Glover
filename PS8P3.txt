@@ -1,0 +1,10 @@
+smith
+45000
+Johnson
+75000
+Miller
+55000
+Wilson
+110000
+Adams
+100000
