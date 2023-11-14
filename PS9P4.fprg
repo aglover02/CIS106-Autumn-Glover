@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-13 07:51:23 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTEtMTM7MDc6MDU6NDkgUE07Mjg2MQ=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTEtMTM7MDc6NTE6MjMgUE07MTsyOTYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="code" type="String" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="code"/>
+            <input variable="hours"/>
+            <call expression="comprate(code)"/>
+            <assign variable="rate" expression="comprate(code)"/>
+            <if expression="hours &gt; 40">
+                <then>
+                    <assign variable="rate" expression="rate*1.5"/>
+                </then>
+                <else>
+                    <assign variable="rate" expression="rate"/>
+                </else>
+            </if>
+            <call expression="compgross(hours,rate)"/>
+            <assign variable="grosspay" expression="compgross(hours,rate)"/>
+            <output expression="&quot;Last Name: &quot;&amp;lastname" newline="True"/>
+            <output expression="&quot;Gross Pay: $&quot;&amp;grosspay" newline="True"/>
+        </body>
+    </function>
+    <function name="compgross" type="Real" variable="grosspay">
+        <parameters>
+            <parameter name="hours" type="Real" array="False"/>
+            <parameter name="rate" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <assign variable="grosspay" expression="hours*rate"/>
+        </body>
+    </function>
+    <function name="comprate" type="Real" variable="rate">
+        <parameters>
+            <parameter name="code" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <if expression="code == &quot;L&quot;">
+                <then>
+                    <assign variable="rate" expression="25"/>
+                </then>
+                <else>
+                    <if expression="code == &quot;A&quot;">
+                        <then>
+                            <assign variable="rate" expression="30"/>
+                        </then>
+                        <else>
+                            <if expression="code == &quot;J&quot;">
+                                <then>
+                                    <assign variable="rate" expression="50"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

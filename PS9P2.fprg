@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autum"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-13 05:49:13 PM"/>
+        <attribute name="created" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTEtMTM7MDU6MjU6MDMgUE07Mjg1MQ=="/>
+        <attribute name="edited" value="YXV0dW07REVTS1RPUC1GR1BBMjE3OzIwMjMtMTEtMTM7MDU6NDk6MTMgUE07MTsyOTY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="hits" type="Real" array="False" size=""/>
+            <declare name="atbats" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="hits"/>
+            <input variable="atbats"/>
+            <call expression="compaverage(hits, atbats)"/>
+            <assign variable="average" expression="compaverage(hits, atbats)"/>
+            <output expression="&quot;Last name: &quot;&amp; lastname" newline="True"/>
+            <output expression="&quot;Batting Average: &quot;&amp; average" newline="True"/>
+        </body>
+    </function>
+    <function name="compaverage" type="Real" variable="average">
+        <parameters>
+            <parameter name="hits" type="Real" array="False"/>
+            <parameter name="atbats" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="average" type="Real" array="False" size=""/>
+            <assign variable="average" expression="hits/atbats"/>
+        </body>
+    </function>
+</flowgorithm>
